@@ -37,6 +37,13 @@ fun Login(navController : NavController, context: Context, modifier: Modifier){
         mutableStateOf("")
     }
     var toast : Toast
+    val user = hashMapOf(
+        "id" to 1,
+        "nombre" to "Alejandro",
+        "tlfn" to 123456789,
+        "ultimoMensaje" to "hola"
+    )
+    CRUDContacto.baseDatos.add(user)
     Column (
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
